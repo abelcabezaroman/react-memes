@@ -1,0 +1,25 @@
+.c-card {
+    position: relative;
+    &__top-text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+        margin: 0;
+        text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000,
+            1px -1px 0 #000, -1px 1px 0 #000;
+        display: block;
+        width: 100%;
+    }
+
+    &__bottom-text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        margin: 0;
+        text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000,
+            1px -1px 0 #000, -1px 1px 0 #000;
+        width: 100%;
+    }
+}
