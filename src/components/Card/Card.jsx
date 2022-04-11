@@ -8,7 +8,7 @@ export default function Card({ data }) {
   return (
     <div className="c-card">
       <h2 className="c-card__top-text">{memeTexts.topText}</h2>
-      <img src={data.url} alt="" />
+      <img src={data.url} alt={memeTexts.name} />
       <h2 className="c-card__bottom-text">{memeTexts.bottomText}</h2>
     </div>
   );
