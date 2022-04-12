@@ -15,11 +15,11 @@ export default function Form() {
     <form>
       <label>
         Top text
-        <input type="text" {...register("topText")} onInput={onChange} />
+        <textarea type="text" {...register("topText")} onInput={onChange} />
       </label>
       <label>
         Bottom text
-        <input type="text" {...register("bottomText")} onInput={onChange} />
+        <textarea type="text" {...register("bottomText")} onInput={onChange} />
       </label>
     </form>
   );

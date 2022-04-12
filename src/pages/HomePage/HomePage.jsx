@@ -2,12 +2,12 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import Form from "../../components/Form/Form";
-import Gallery from "../../components/Gallery/Galley";
+import Gallery from "../../components/Gallery/Gallery";
 import { MemeTextsContext } from "../../contexts/MemeTextsContext";
 
 export default function HomePage() {
   const [memes, setMemes] = useState([]);
-  const [memeTexts, setMemeTexts] = useState({})
+  const [memeTexts, setMemeTexts] = useState({topText: "", bottomText: ""})
 
   useEffect(() => {
     const getMemes = async () => {
