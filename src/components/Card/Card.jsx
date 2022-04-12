@@ -21,7 +21,7 @@ export default function Card({ data }) {
   return (
     <>
       <div ref={memeRef} className="c-card">
-        <h2 className="c-card__top-text">
+        <h2 style={{left: memeTexts.topTextX + "%", top: memeTexts.topTextY + "%"}} className="c-card__top-text">
           {memeTexts.topText.replace(/ /g, "\u00a0")}
         </h2>
         <img
@@ -29,7 +29,7 @@ export default function Card({ data }) {
           src={data.url}
           alt={memeTexts.name}
         />
-        <h2 className="c-card__bottom-text">
+        <h2 style={{left: memeTexts.bottomTextX + "%", bottom: memeTexts.bottomTextY + "%"}} className="c-card__bottom-text">
           {memeTexts.bottomText.replace(/ /g, "\u00a0")}
         </h2>
       </div>
