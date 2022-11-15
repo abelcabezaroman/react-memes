@@ -1,0 +1,12 @@
+.c-form{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 1;
+    background-color: #282C34;
+    padding: 16px;
+    // box-shadow: #00000033 10px 0px 25px 6px;
+    box-sizing: border-box;
+}

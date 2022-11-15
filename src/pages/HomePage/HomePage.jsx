@@ -7,7 +7,7 @@ import { MemeTextsContext } from "../../contexts/MemeTextsContext";
 
 export default function HomePage() {
   const [memes, setMemes] = useState([]);
-  const [memeTexts, setMemeTexts] = useState({topText: "", bottomText: ""})
+  const [memeTexts, setMemeTexts] = useState({ topText: "", bottomText: "" });
 
   useEffect(() => {
     const getMemes = async () => {
@@ -20,11 +20,16 @@ export default function HomePage() {
 
   return (
     <div>
-      <MemeTextsContext.Provider value={{memeTexts, setMemeTexts}}>
-        <Form />
-        <Gallery list={memes} />
+      <MemeTextsContext.Provider value={{ memeTexts, setMemeTexts }}>
+        <div>
+          <div style={{ width: "200px" }}>
+            <Form />
+          </div>
+          <div className="px-2" style={{ boxSizing: "border-box",marginLeft: "200px",width: "calc(100% - 200px)" }}>
+            <Gallery list={memes} />
+          </div>
+        </div>
       </MemeTextsContext.Provider>
     </div>
   );
 }
-

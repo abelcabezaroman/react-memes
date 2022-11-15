@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { MemeTextsContext } from "../../contexts/MemeTextsContext";
-
+import "./Form.scss";
 export default function Form() {
   const { register, watch } = useForm();
   const { setMemeTexts } = useContext(MemeTextsContext);
@@ -11,8 +11,8 @@ export default function Form() {
   };
 
   return (
-    <form>
-      <div>
+    <form className="c-form d-flex justify-content-center flex-column">
+      <div className="d-flex flex-column align-items-start">
         <label>
           Top text
           <textarea type="text" {...register("topText")} onInput={onChange} />
@@ -27,7 +27,7 @@ export default function Form() {
           <input type="number" {...register("topTextY")} onInput={onChange} />
         </label>
       </div>
-      <div>
+      <div className="mt-4 d-flex flex-column align-items-start">
         <label>
           Bottom text
           <textarea
